@@ -1,4 +1,11 @@
 package todo.ui.button;
 
-public class AddNewButtonActionListener {
+import java.awt.event.ActionEvent;
+
+public class AddNewButtonActionListener extends ListTableActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        list.add("New item");
+        table.revalidate();
+    }
 }
